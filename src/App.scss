@@ -52,29 +52,29 @@ main {
     display: flex;
     padding-right: 18px;
   }
-  .left-column {
-    border: solid blue 1px;
-    width: 860px;
+  .meals-column {
+    width: 845px;
     height: 100%;
-  }
-  .right-column {
-    border: solid black 2px;
-    border-radius: 10px;
-    width: 350px;
-    height: 190px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
   h2 {
     margin: 20px 0;
   }
-  .componentsOfMeal {
+  .all-meals {
     display: flex;
+    justify-content: flex-start;
+    gap: 10px;
     flex-wrap: wrap;
+    align-content: space-around;
   }
-  .component {
+  .meal {
+    .left-side {
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     p {
+      padding-right: 10px;
       height: 2.6rem;
       font-size: 0.9rem;
       overflow: hidden;
@@ -85,7 +85,6 @@ main {
       object-fit: cover;
       border-radius: 5px;
     }
-    margin-right: 20px;
     margin-bottom: 20px;
     background-color: white;
     border-radius: 5px;
@@ -96,4 +95,23 @@ main {
     align-items: center;
     padding: 15px;
   }
+  .meal:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px #868a8a;
+  }
+}
+.basket {
+  border: solid black 2px;
+  border-radius: 10px;
+  width: 350px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.basket-orders {
+  display: flex;
 }
