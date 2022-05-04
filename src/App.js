@@ -79,7 +79,7 @@ function App() {
                                 const newBasket = [...basket];
                                 newBasket.push(meal);
                                 setBasket(newBasket);
-                                setSubtotal(subtotal + Number(meal.price));
+                                // setSubtotal(subtotal + Number(meal.price));
                               } else {
                                 // else we add a quantity in basket state object with this id
                                 const newBasket = [...basket];
@@ -88,7 +88,7 @@ function App() {
                                   (item) => item.id === meal.id
                                 ).quantity += 1;
                                 setBasket(newBasket);
-                                setSubtotal(subtotal + Number(meal.price));
+                                // setSubtotal(subtotal + Number(meal.price));
                               }
                             }}
                           >
@@ -129,11 +129,11 @@ function App() {
                         if (thisMeal.quantity > 1) {
                           thisMeal.quantity -= 1;
                           setBasket(newBasket);
-                          setSubtotal(subtotal - thisMeal.price);
+                          // setSubtotal(subtotal - thisMeal.price);
                         } else {
                           newBasket.splice(thisMeal, 1);
                           setBasket(newBasket);
-                          setSubtotal(subtotal - thisMeal.price);
+                          // setSubtotal(subtotal - thisMeal.price);
                         }
                       }}
                     >
@@ -149,7 +149,7 @@ function App() {
                         thisMeal.quantity += 1;
                         setBasket(newBasket);
 
-                        setSubtotal(subtotal + Number(thisMeal.price));
+                        // setSubtotal(subtotal + Number(thisMeal.price));
                       }}
                     >
                       +
@@ -161,10 +161,10 @@ function App() {
               })}
             </div>
             <div className="sub-total">
-              <p>Sous-total : {subtotal}</p>
+              <p>Sous-total : </p>
               <p>Frais de livraison : {frais}</p>
             </div>
-            <div className="total">Total : {subtotal + frais}</div>
+            <div className="total">Total : </div>
           </div>
         </div>
       </main>
