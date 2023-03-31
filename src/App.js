@@ -25,7 +25,7 @@ function App() {
 
   // creation of basket's state
   const [basket, setBasket] = useState([]);
-  const [subtotal, setSubtotal] = useState(0);
+  //const [subtotal, setSubtotal] = useState(0);
   const frais = 2.5;
 
   //waiting for request to arrive before coninuing
