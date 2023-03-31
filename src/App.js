@@ -12,7 +12,7 @@ function App() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://delivero-backend-clone.herokuapp.com/"
+          "https://deliveroo-backend-5uek.onrender.com/"
         );
         setData(response.data);
         setIsLoading(false);
